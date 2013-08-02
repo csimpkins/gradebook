@@ -4,8 +4,21 @@ import java.util.ArrayList;
 
 public class Class {
 	private Course course;
+	private ArrayList<Section> sections;
+	private double aveGrade;
+	private String aveLetterGrade;
+
+	public Class(ArrayList<Section> sections, Course course) {
+		this.sections = sections;
+		this.course = course;
+	}
+
 	public Course getCourse() {
 		return course;
+	}
+
+	public String getAvgLetterGrade() {
+		return aveLetterGrade;
 	}
 
 	public void setCourse(Course course) {
@@ -20,19 +33,11 @@ public class Class {
 		this.sections = sections;
 	}
 
-	private ArrayList<Section> sections;
-	private double aveGrade;
-	private String aveLetterGrade;
-
-	public Class(ArrayList<Section> sections, Course course) {
-		this.sections = sections;
-		this.course = course;
-	}
 	public void calculate() {
 		int count = 1;
-		for (Section g : this.sections) {
-			g.calculate();
-			this.aveGrade += g.getAveGrade();
+		for (Section section : this.sections) {
+			section.calculate();
+			this.aveGrade += section.getAveGrade();
 			count++;
 		}
 		this.aveGrade = this.aveGrade / count;
