@@ -2,12 +2,11 @@ package main.java;
 
 public class GradingScheme {
 	private double curve;
-	
+
 	private boolean roundUp;
 
 	public GradingScheme(double curve, boolean roundUp) {
 		this.curve = curve;
-		
 		this.roundUp = roundUp;
 	}
 
@@ -18,8 +17,6 @@ public class GradingScheme {
 	public void setCurve(double curve) {
 		this.curve = curve;
 	}
-
-
 
 	public boolean isRoundUp() {
 		return roundUp;
