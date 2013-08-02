@@ -48,7 +48,7 @@ public class Student {
 			this.grade += g.getScore() * g.getGradeCategory().getWeight() / 100;
 		}
 		this.grade += this.gradeScheme.getCurve();
-		if(this.gradeScheme.isRoundUp()){
+		if (this.gradeScheme.isRoundUp()) {
 			this.grade = Math.ceil(this.grade);
 		}
 		if (this.grade < 60) {
