@@ -10,12 +10,12 @@ public class Course {
 	private ArrayList<Class> classes;
 
 	public Course(String subject, int courseNumber, String name,
-			ArrayList<Course> preRequizites,ArrayList<Class> classes) {
+			ArrayList<Course> preRequizites, ArrayList<Class> classes) {
 		this.subject = subject;
 		this.courseNumber = courseNumber;
 		this.name = name;
 		this.preRequizites = preRequizites;
-		this.classes =classes;
+		this.classes = classes;
 	}
 
 	public ArrayList<Class> getClasses() {
